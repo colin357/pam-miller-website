@@ -75,3 +75,21 @@
   });
   function show(t) { msg.textContent = t; msg.hidden = false; msg.focus(); }
 })();
+
+// Loan guide slider: previous/next buttons scroll one card at a time.
+(function () {
+  document.querySelectorAll('[data-slider]').forEach(function (el) {
+    var track = el.querySelector('.slider-track');
+    var prev = el.querySelector('[data-prev]'), next = el.querySelector('[data-next]');
+    function step() { var li = track.querySelector('li'); return li ? li.getBoundingClientRect().width + 20 : 300; }
+    function sync() {
+      prev.disabled = track.scrollLeft < 8;
+      next.disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 8;
+    }
+    prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+    track.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  });
+})();

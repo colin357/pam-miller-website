@@ -32,8 +32,16 @@ export const band = (key, html) => {
 <p class="credit"><a href="${p.src}" rel="noopener nofollow">${p.credit}</a></p>`;
 };
 
-export const loanGrid = () =>
-  `<ul class="grid">${loans.map((l) => `<li><a href="/loans/${l.slug}/"><h3>${l.short}</h3><p>${l.card}</p><span class="go">Read the guide →</span></a></li>`).join('')}</ul>`;
+const loanCards = () =>
+  loans.map((l, i) => `<li><a href="/loans/${l.slug}/" style="--bg:url(/assets/img/card-${i + 1}.webp)"><h3>${l.short}</h3><p>${l.card}</p><span class="go">Read the guide →</span></a></li>`).join('');
+
+export const loanGrid = () => `<ul class="grid">${loanCards()}</ul>`;
+
+// Horizontal, swipeable version with previous/next buttons.
+export const loanSlider = () => `<div class="slider" data-slider>
+<ul class="grid slider-track" tabindex="0" aria-label="Loan guides">${loanCards()}</ul>
+<div class="slider-nav"><button type="button" data-prev aria-label="Previous loan guides">${arrow}</button><button type="button" data-next aria-label="More loan guides">${arrow}</button></div>
+</div>`;
 
 export const teamStrip = () =>
   `<ul class="team">${TEAM.map((t) => `<li><img src="/assets/img/${t.img}" width="${t.w}" height="${t.h}" alt="${esc(t.legalName)}, ${t.role} at Fairway in Frisco, Texas" loading="lazy" decoding="async"><h3>${t.name}</h3><p>${t.role} · NMLS #${t.nmls}<br><a href="tel:${t.phone.replace(/-/g, '')}">${t.phone}</a></p></li>`).join('')}</ul>`;

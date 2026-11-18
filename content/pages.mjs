@@ -1,6 +1,6 @@
 import { SITE, PAM, BRANCH, FAIRWAY, TEAM, AREAS, PHOTOS } from './site.mjs';
 import { loans } from './loans.mjs';
-import { answer, facts, faq, band, loanGrid, teamStrip, cta, contactCard, loanList, arrow, phoneIcon, esc } from './parts.mjs';
+import { answer, facts, faq, band, loanGrid, loanSlider, teamStrip, cta, contactCard, loanList, arrow, phoneIcon, esc } from './parts.mjs';
 
 const addr = `${BRANCH.street}, ${BRANCH.city}, ${BRANCH.state} ${BRANCH.zip}`;
 
@@ -41,7 +41,7 @@ const home = {
 
 <section class="sec sec--stone sec--rule" id="loans"><div class="wrap">
 <header class="sec-head"><h2>Which home loan fits your situation?</h2><p class="lede">Each guide starts with a short answer, then covers requirements, costs and the Texas-specific rules that apply.</p></header>
-${loanGrid()}
+${loanSlider()}
 </div></section>
 
 ${band('square', 'Based in Frisco. Lending across North Texas.')}
@@ -198,46 +198,69 @@ const about = {
   desc: `Meet Pam Miller (Pamela Stuever Miller), NMLS #${PAM.nmls}, Co-Branch Manager at Fairway in Frisco, TX. Precise, patient mortgage guidance for DFW buyers.`,
   label: 'About Pam',
   h1: 'Pam Miller, mortgage loan officer in Frisco, Texas',
-  lede: 'Precise with the numbers. Patient with the questions.',
   crumbs: [['About Pam', '/about/']],
   faqs: aboutFaqs,
-  body: `<section class="sec"><div class="wrap split">
-<div class="sticky">
-<figure class="hero-photo hero-photo--page">
-<img src="/assets/img/pam-miller-portrait.webp" width="387" height="480" alt="Portrait of Pamela Stuever Miller, Co-Branch Manager at Fairway Independent Mortgage Corporation, Frisco, Texas" style="aspect-ratio:387/480">
+  body: `<section class="sec"><div class="wrap about-intro">
+<figure class="hero-photo hero-photo--arch">
+<img src="/assets/img/pam-miller-cutout.webp" width="593" height="693" alt="Portrait of Pamela Stuever Miller, Co-Branch Manager at Fairway Independent Mortgage Corporation, Frisco, Texas">
 </figure>
+<div>
+<h2>A loan officer who takes the time</h2>
+<p class="lede">Pam Miller (Pamela Stuever Miller) is a Co-Branch Manager and licensed mortgage loan officer, NMLS #${PAM.nmls}, at Fairway Independent Mortgage Corporation's Frisco, Texas branch. She leads the branch with Gary Miller and personally works with homebuyers and homeowners across the Dallas–Fort Worth Metroplex.</p>
+<p>A mortgage is a large stack of numbers, and most people sign for one only a few times in their lives. Pam's approach is built around that fact.</p>
+<div class="btn-row"><a class="btn" href="/contact/">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
 </div>
-<div class="prose">
-${answer(`Pam Miller (Pamela Stuever Miller) is a Co-Branch Manager and licensed mortgage loan officer, NMLS #${PAM.nmls}, at Fairway Independent Mortgage Corporation's Frisco, Texas branch. She leads the branch with Gary Miller and personally works with homebuyers and homeowners across the Dallas–Fort Worth Metroplex.`, 'In one paragraph')}
-<h2>How does Pam work with clients?</h2>
-<p>A mortgage is a large stack of numbers, and most people sign for one only a few times in their lives. Pam's approach is built around that fact. She is exact about figures, she explains each one, and she does not move on until the client is comfortable.</p>
-<p>That matters most for first-time borrowers, who often arrive worried about their credit and about interest rates. Pam starts by showing where they stand today, what a realistic payment looks like, and what, if anything, would improve their options before they apply.</p>
-<h2>What does Pam specialize in?</h2>
-<ul>
-<li><a href="/loans/first-time-homebuyer/">First-time homebuyers</a>, including Texas down payment assistance</li>
-<li><a href="/loans/va-loans/">VA loans</a> and <a href="/loans/fha-loans/">FHA loans</a></li>
-<li><a href="/loans/jumbo-loans/">Jumbo financing for luxury homes</a></li>
-<li><a href="/loans/investment-property-loans/">Investment properties</a></li>
-<li><a href="/loans/refinance/">Refinancing</a>, including Texas cash-out rules</li>
-<li><a href="/loans/downsizing-relocation/">Relocation and downsizing</a></li>
+</div></section>
+
+<section class="sec sec--stone"><div class="wrap">
+<header class="sec-head"><h2>How does Pam work with clients?</h2></header>
+<ul class="trio">
+<li><h3>Exact with the figures</h3><p>Every number on the Loan Estimate is checked and explained, so the payment and the cash to close are never a surprise.</p></li>
+<li><h3>Patient with the questions</h3><p>She does not move on until the client is comfortable. Asking the same question twice is welcome.</p></li>
+<li><h3>Honest about where you stand</h3><p>First-time borrowers see where their credit is today, what a realistic payment looks like, and what would improve their options before they apply.</p></li>
 </ul>
-<h2>Who does Pam work with?</h2>
-<p>Her clients range from Gen Z and millennial buyers purchasing a first home to seniors right-sizing for retirement, along with young professionals, entrepreneurs and small business owners whose income takes more care to document. The typical loan is around $500,000, with plenty above and below.</p>
-<h2>Credentials and contact details</h2>
+</div></section>
+
+${band('hall', 'Precise with the numbers. Patient with the questions.')}
+
+<section class="sec"><div class="wrap">
+<header class="sec-head"><h2>What does Pam specialize in?</h2>
+<p class="lede">Her clients range from Gen Z and millennial first-time buyers to seniors right-sizing for retirement, along with entrepreneurs and small business owners whose income takes more care to document.</p></header>
+<ul class="grid grid--3">
+<li><a href="/loans/first-time-homebuyer/"><h3>First-time homebuyers</h3><p>Low-down-payment loans and Texas down payment assistance.</p><span class="go">Read the guide →</span></a></li>
+<li><a href="/loans/va-loans/"><h3>VA and FHA loans</h3><p>Government-backed options for veterans and for buyers building credit.</p><span class="go">Read the guide →</span></a></li>
+<li><a href="/loans/jumbo-loans/"><h3>Luxury homes</h3><p>Jumbo financing for higher-priced homes in Frisco, Prosper and Plano.</p><span class="go">Read the guide →</span></a></li>
+<li><a href="/loans/investment-property-loans/"><h3>Investment properties</h3><p>Conventional and DSCR loans for rental homes.</p><span class="go">Read the guide →</span></a></li>
+<li><a href="/loans/refinance/"><h3>Refinancing</h3><p>Rate, term and cash-out refinancing under Texas rules.</p><span class="go">Read the guide →</span></a></li>
+<li><a href="/loans/downsizing-relocation/"><h3>Relocation and downsizing</h3><p>Buying before you sell and qualifying on retirement income.</p><span class="go">Read the guide →</span></a></li>
+</ul>
+</div></section>
+
+<section class="sec sec--pine"><div class="wrap">
+<header class="sec-head"><h2>Credentials and contact details</h2></header>
+<div class="duo">
+<div class="duo-card"><h3>Credentials</h3>
 ${facts([
   ['Full name', PAM.legalName],
   ['Title', `${PAM.title}, ${FAIRWAY.name}`],
   ['NMLS ID', `<a href="${PAM.nmlsLookup}" rel="noopener">#${PAM.nmls}</a>`],
-  ['State licenses', `Texas; Oklahoma (license #${PAM.okLicense})`],
+  ['Licensed in', `Texas; Oklahoma (license #${PAM.okLicense})`],
+  ['Client reviews', `${PAM.rating} out of 5 from ${PAM.reviews} reviews on <a href="${FAIRWAY.reviewsUrl}" rel="noopener">Experience.com</a>, as shown on Fairway.com in ${PAM.ratingAsOf}`],
+])}</div>
+<div class="duo-card"><h3>Contact</h3>
+${facts([
   ['Office', addr],
-  ['Office phone', `<a href="tel:${PAM.phoneE164}">${PAM.phone}</a>`],
+  ['Phone', `<a href="tel:${PAM.phoneE164}">${PAM.phone}</a>`],
   ['Email', `<a href="mailto:${PAM.email}">${PAM.email}</a>`],
   ['Fairway profile', `<a href="${PAM.profile}" rel="noopener">fairway.com/lo/pamela-miller-${PAM.nmls}</a>`],
-  ['Client reviews', `${PAM.rating} out of 5 from ${PAM.reviews} reviews on <a href="${FAIRWAY.reviewsUrl}" rel="noopener">Experience.com</a>, as shown on Fairway.com in ${PAM.ratingAsOf}`],
-])}
-<h2>Frequently asked</h2>
-${faq(aboutFaqs)}
+  ['Directions', `<a href="${BRANCH.map}" rel="noopener">Open in Google Maps →</a>`],
+])}</div>
 </div>
+</div></section>
+
+<section class="sec sec--stone"><div class="wrap split">
+<div class="sticky"><h2>Frequently asked questions</h2></div>
+${faq(aboutFaqs)}
 </div></section>
 ${cta()}`,
 };
