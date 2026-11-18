@@ -164,6 +164,7 @@ ${p.body}
 <div class="legal">
 <p class="eho">${eho} Equal Housing Opportunity</p>
 <p>Copyright © ${SITE.updated.slice(0, 4)} ${FAIRWAY.name}. NMLS #${FAIRWAY.nmls} (<a href="https://www.nmlsconsumeraccess.org/" rel="noopener">www.nmlsconsumeraccess.org</a>). ${FAIRWAY.address}, ${FAIRWAY.phone}. All rights reserved. This is not an offer to enter into an agreement. Not all customers will qualify. Information, rates and programs are subject to change without notice. All products are subject to credit and property approval. Other restrictions and limitations may apply.</p>
+<p>Designed by <a href="https://ownitsocial.com" target="_blank" rel="noopener">Own It Social</a></p>
 <p>${PAM.legalName}, NMLS #${PAM.nmls}. Licensed in Texas and Oklahoma. Texas consumers: see the <a href="${FAIRWAY.texasNotice}" rel="noopener">Texas Consumer Complaint and Recovery Fund Notice</a>. A pre-approval is based on a review of income and asset information provided by the borrower and a credit report, and is not a commitment to lend.</p>
 </div>
 </div></footer>
