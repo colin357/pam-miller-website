@@ -26,7 +26,7 @@ const home = {
 <div class="wrap">
 <div class="hero-copy">
 <h1>Your mortgage lender in Frisco, Texas</h1>
-<p class="lede">Pam Miller is a Co-Branch Manager with Fairway Independent Mortgage Corporation in Frisco. She and her team help buyers and homeowners across Dallas–Fort Worth compare loan options, sort out credit questions and understand exactly what a rate will cost them.</p>
+<p class="lede">Pam Miller is a Co-Branch Manager with Fairway Independent Mortgage Corporation in Frisco. She and her team help buyers and homeowners all across Texas compare loan options, sort out credit questions and understand exactly what a rate will cost them.</p>
 <div class="btn-row"><a class="btn" href="${PAM.apply}" target="_blank" rel="noopener">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
 </div>
 <figure class="hero-photo hero-photo--arch">
@@ -35,7 +35,7 @@ const home = {
 </div></section>
 <section class="sec" id="about"><div class="wrap">
 <header class="sec-head"><h2>Meet Pam Miller</h2>
-<p class="lede">Pam is a Co-Branch Manager at Fairway in Frisco who is known for being precise with the numbers and patient with the questions. First-time buyers, veterans and homeowners across Dallas–Fort Worth come to her for a loan they actually understand.</p>
+<p class="lede">Pam is a Co-Branch Manager at Fairway in Frisco who is known for being precise with the numbers and patient with the questions. First-time buyers, veterans and homeowners all across Texas come to her for a loan they actually understand.</p>
 <div class="btn-row" style="justify-content:center"><a class="btn btn--ghost" href="/about/">About Pam ${arrow}</a></div></header>
 </div></section>
 
@@ -44,7 +44,7 @@ const home = {
 ${loanSlider()}
 </div></section>
 
-${band('square', 'Based in Frisco. Lending across North Texas.')}
+${band('square', 'Based in Frisco. Lending all across Texas.')}
 
 <section class="sec"><div class="wrap">
 <header class="sec-head"><h2>Credit and interest rates, in plain terms</h2></header>
