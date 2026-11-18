@@ -23,8 +23,7 @@ const home = {
   body: `
 <section class="hero"><div class="wrap">
 <div>
-<span class="label">Mortgage loan officer · Frisco, Texas</span>
-<h1>Home loans, <span class="mark">explained</span> until they make sense.</h1>
+<h1>Home loans, explained until they make sense.</h1>
 <p class="lede">Pam Miller is a Co-Branch Manager with Fairway Independent Mortgage Corporation in Frisco. She and her team help buyers and homeowners across Dallas–Fort Worth compare loan options, sort out credit questions and understand exactly what a rate will cost them.</p>
 <div class="btn-row"><a class="btn" href="/contact/">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
 <ul class="ledger" aria-label="Key facts about Pam Miller">
@@ -42,7 +41,6 @@ const home = {
 
 <section class="sec" id="about"><div class="wrap split">
 <div class="sticky">
-<span class="label">At a glance</span>
 <h2>Who is Pam Miller?</h2>
 </div>
 <div>
@@ -63,16 +61,14 @@ ${facts([
 </div></section>
 
 <section class="sec sec--stone sec--rule" id="loans"><div class="wrap">
-<span class="label">Loan options</span>
 <h2>Which home loan fits your situation?</h2>
 <p class="lede" style="margin-bottom:2.2rem">Each guide starts with a short answer, then covers requirements, costs and the Texas-specific rules that apply.</p>
 ${loanGrid()}
 </div></section>
 
-${band('square', 'Based in Frisco. Lending across <em>North Texas.</em>')}
+${band('square', 'Based in Frisco. Lending across North Texas.')}
 
 <section class="sec"><div class="wrap">
-<span class="label">The two big worries</span>
 <h2>Credit and interest rates, in plain terms</h2>
 <div class="split split--even" style="margin-top:2.4rem">
 <div>
@@ -90,7 +86,6 @@ ${band('square', 'Based in Frisco. Lending across <em>North Texas.</em>')}
 
 <section class="sec sec--pine" id="process"><div class="wrap split">
 <div class="sticky">
-<span class="label">The process</span>
 <h2>How does getting a mortgage with Pam work?</h2>
 <p class="lede">Five steps. Many purchase loans close in about 30 to 45 days once a contract is signed.</p>
 </div>
@@ -104,7 +99,6 @@ ${band('square', 'Based in Frisco. Lending across <em>North Texas.</em>')}
 </div></section>
 
 <section class="sec sec--stone" id="calculator"><div class="wrap">
-<span class="label">Run the numbers</span>
 <h2>What would the monthly payment be?</h2>
 <p class="lede" style="margin-bottom:2.2rem">Enter a price, a down payment and an interest rate to estimate principal, interest, taxes and insurance.</p>
 <div class="calc">
@@ -117,7 +111,7 @@ ${band('square', 'Based in Frisco. Lending across <em>North Texas.</em>')}
 <label class="full">Homeowners insurance ($ / yr)<input id="c-ins" inputmode="numeric" value="3600"></label>
 </form>
 <div class="calc-out" aria-live="polite">
-<span class="label" id="o-hint">Estimated monthly payment</span>
+<span class="calc-hint" id="o-hint">Estimated monthly payment</span>
 <span class="big" id="o-total">—</span>
 <dl>
 <div><dt>Principal and interest</dt><dd id="o-pi">—</dd></div>
@@ -132,7 +126,6 @@ ${band('square', 'Based in Frisco. Lending across <em>North Texas.</em>')}
 </div></section>
 
 <section class="sec"><div class="wrap">
-<span class="label">The Frisco team</span>
 <h2>Who will be working on my loan?</h2>
 <p class="lede" style="margin-bottom:2.2rem">Four licensed loan originators, supported by an in-house processor and closer, work from the Frisco branch on Warren Parkway.</p>
 ${teamStrip()}
@@ -141,7 +134,6 @@ ${teamStrip()}
 
 <section class="sec sec--stone sec--rule"><div class="wrap split">
 <div class="sticky">
-<span class="label">Common questions</span>
 <h2>Quick answers about working with Pam</h2>
 <p><a href="/answers/">See all mortgage answers →</a></p>
 </div>
@@ -348,7 +340,7 @@ ${answer(`Pam Miller's team lends throughout the Dallas–Fort Worth Metroplex f
 ${faq(areaFaqs)}
 </div>
 </div></section>
-${band('hall', 'Frisco, Collin County and the <em>whole Metroplex.</em>')}
+${band('hall', 'Frisco, Collin County and the whole Metroplex.')}
 ${cta()}`,
 };
 
@@ -433,7 +425,7 @@ ${facts([
 </form>
 </div>
 </div></section>
-${band('bonnets', 'Good questions get <em>straight answers.</em>')}`,
+${band('bonnets', 'Good questions get straight answers.')}`,
 };
 
 /* ----------------------------------------------------------------- LEGAL */

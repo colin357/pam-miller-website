@@ -8,8 +8,7 @@ export const strip = (s) => String(s).replace(/<[^>]+>/g, ' ').replace(/\s+/g, '
 export const arrow = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg>`;
 export const phoneIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>`;
 
-export const answer = (text, label = 'Short answer') =>
-  `<div class="answer"><span class="label">${label}</span><p>${text}</p></div>`;
+export const answer = (text) => `<div class="answer"><p>${text}</p></div>`;
 
 export const facts = (rows) =>
   `<dl class="facts">${rows.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>`;
