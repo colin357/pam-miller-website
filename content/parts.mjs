@@ -51,7 +51,7 @@ export const cta = (h = 'Have a question about your numbers?', p = 'Tell Pam whe
 ${crest(64, true)}
 <h2>${h}</h2>
 <p>${p}</p>
-<div class="btn-row"><a class="btn" href="/contact/">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
+<div class="btn-row"><a class="btn" href="${PAM.apply}" target="_blank" rel="noopener">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
 </div></section>`;
 
 export const contactCard = () =>

@@ -23,6 +23,8 @@ export const PAM = {
   licensed: ['Texas', 'Oklahoma'],
   okLicense: 'MLO05564',
   profile: 'https://www.fairway.com/lo/pamela-miller-267016',
+  // Online pre-approval application. Every "Get pre-approved" / "Start a pre-approval" button goes here.
+  apply: 'https://mtgpro.co/dr/c/ipiyr',
   instagram: 'https://www.instagram.com/pammiesmiller/',
   nmlsLookup: 'https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/267016',
   rating: '4.89',

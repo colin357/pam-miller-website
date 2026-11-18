@@ -136,7 +136,7 @@ ${p.noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" 
 <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
 <nav class="nav" id="nav" aria-label="Main">
 ${NAV.map(([n, u]) => `<a href="${u}"${cur(u)}>${n}</a>`).join('\n')}
-<a class="btn" href="/contact/">Get pre-approved</a>
+<a class="btn" href="${PAM.apply}" target="_blank" rel="noopener">Get pre-approved</a>
 </nav>
 </div></header>
 <main id="main">
@@ -168,7 +168,7 @@ ${p.body}
 </div>
 </div></footer>
 <a class="reviews-badge" href="${BRANCH.page}" rel="noopener" aria-label="Rated ${BRANCH.rating} out of 5 from more than 1,000 client reviews of the Frisco team on Experience.com"><span class="stars" aria-hidden="true">★</span><span><b>1,000+ reviews</b> · rated ${BRANCH.rating} stars</span></a>
-<div class="callbar"><a href="tel:${PAM.phoneE164}">Call Pam</a><a href="/contact/">Get pre-approved</a></div>
+<div class="callbar"><a href="tel:${PAM.phoneE164}">Call Pam</a><a href="${PAM.apply}" target="_blank" rel="noopener">Get pre-approved</a></div>
 <script src="/assets/js/site.js?v=${JS_V}" defer></script>
 </body>
 </html>

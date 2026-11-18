@@ -27,7 +27,7 @@ const home = {
 <div class="hero-copy">
 <h1>Your mortgage lender in Frisco, Texas</h1>
 <p class="lede">Pam Miller is a Co-Branch Manager with Fairway Independent Mortgage Corporation in Frisco. She and her team help buyers and homeowners across Dallas–Fort Worth compare loan options, sort out credit questions and understand exactly what a rate will cost them.</p>
-<div class="btn-row"><a class="btn" href="/contact/">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
+<div class="btn-row"><a class="btn" href="${PAM.apply}" target="_blank" rel="noopener">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
 </div>
 <figure class="hero-photo hero-photo--arch">
 <img src="/assets/img/pam-miller-cutout.webp" width="593" height="693" alt="Pam Miller, mortgage loan officer and Co-Branch Manager at Fairway in Frisco, Texas">
@@ -208,7 +208,7 @@ const about = {
 <h2>A loan officer who takes the time</h2>
 <p class="lede">Pam Miller (Pamela Stuever Miller) is a Co-Branch Manager and licensed mortgage loan officer, NMLS #${PAM.nmls}, at Fairway Independent Mortgage Corporation's Frisco, Texas branch. She leads the branch with Gary Miller and personally works with homebuyers and homeowners across the Dallas–Fort Worth Metroplex.</p>
 <p>A mortgage is a large stack of numbers, and most people sign for one only a few times in their lives. Pam's approach is built around that fact.</p>
-<div class="btn-row"><a class="btn" href="/contact/">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
+<div class="btn-row"><a class="btn" href="${PAM.apply}" target="_blank" rel="noopener">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
 </div>
 </div></section>
 
@@ -401,7 +401,7 @@ ${facts([
   ['Branch phone', `<a href="tel:${BRANCH.phoneE164}">${BRANCH.phone}</a>`],
   ['Branch fax', BRANCH.fax],
   ['Office', `<address>${FAIRWAY.name}<br>${BRANCH.street}<br>${BRANCH.city}, ${BRANCH.state} ${BRANCH.zip}<br><a href="${BRANCH.map}" rel="noopener">Get directions →</a></address>`],
-  ['Apply online', `<a href="${PAM.profile}" rel="noopener">Pam's secure application on fairway.com →</a>`],
+  ['Apply online', `<a href="${PAM.apply}" target="_blank" rel="noopener">Start Pam's secure online application →</a>`],
   ['NMLS', `Pam Miller #${PAM.nmls} · Fairway #${FAIRWAY.nmls}`],
 ])}
 <div class="note"><h3>What to have handy</h3>
