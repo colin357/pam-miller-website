@@ -1,5 +1,6 @@
 // Static site generator. `node build.mjs` writes the finished site to ./public
-import { mkdirSync, writeFileSync, rmSync, cpSync } from 'node:fs';
+import { mkdirSync, writeFileSync, rmSync, cpSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { SITE, PAM, BRANCH, FAIRWAY, TEAM, AREAS } from './content/site.mjs';
 import { pages } from './content/pages.mjs';
@@ -7,6 +8,10 @@ import { loans } from './content/loans.mjs';
 import { esc, strip, arrow, crest } from './content/parts.mjs';
 
 const OUT = 'public';
+// Content hash appended to CSS/JS URLs so browsers and CDNs never serve a stale stylesheet.
+const ver = (f) => createHash('sha1').update(readFileSync(f)).digest('hex').slice(0, 10);
+const CSS_V = ver('assets/css/site.css');
+const JS_V = ver('assets/js/site.js');
 const abs = (p) => SITE.url + p;
 
 const NAV = [
@@ -120,7 +125,7 @@ ${p.noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/site.css?v=${CSS_V}">
 <script type="application/ld+json">${graph(p)}</script>
 </head>
 <body>
@@ -164,7 +169,7 @@ ${p.body}
 </div></footer>
 <a class="reviews-badge" href="${BRANCH.page}" rel="noopener" aria-label="Rated ${BRANCH.rating} out of 5 from more than 1,000 client reviews of the Frisco team on Experience.com"><span class="stars" aria-hidden="true">★</span><span><b>1,000+ reviews</b> · rated ${BRANCH.rating} stars</span></a>
 <div class="callbar"><a href="tel:${PAM.phoneE164}">Call Pam</a><a href="/contact/">Get pre-approved</a></div>
-<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/site.js?v=${JS_V}" defer></script>
 </body>
 </html>
 `;
