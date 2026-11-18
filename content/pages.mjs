@@ -29,8 +29,8 @@ const home = {
 <p class="lede">Pam Miller is a Co-Branch Manager with Fairway Independent Mortgage Corporation in Frisco. She and her team help buyers and homeowners across Dallas–Fort Worth compare loan options, sort out credit questions and understand exactly what a rate will cost them.</p>
 <div class="btn-row"><a class="btn" href="/contact/">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
 </div>
-<figure class="hero-photo">
-<img src="/assets/img/pam-miller-headshot.webp" width="593" height="693" alt="Pam Miller, mortgage loan officer and Co-Branch Manager at Fairway in Frisco, Texas">
+<figure class="hero-photo hero-photo--arch">
+<img src="/assets/img/pam-miller-cutout.webp" width="593" height="693" alt="Pam Miller, mortgage loan officer and Co-Branch Manager at Fairway in Frisco, Texas">
 </figure>
 </div></section>
 <section class="sec" id="about"><div class="wrap">
