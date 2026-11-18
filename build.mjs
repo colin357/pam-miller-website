@@ -162,7 +162,7 @@ ${p.body}
 <p>${PAM.legalName}, NMLS #${PAM.nmls}. Licensed in Texas and Oklahoma. Texas consumers: see the <a href="${FAIRWAY.texasNotice}" rel="noopener">Texas Consumer Complaint and Recovery Fund Notice</a>. A pre-approval is based on a review of income and asset information provided by the borrower and a credit report, and is not a commitment to lend.</p>
 </div>
 </div></footer>
-<a class="reviews-badge" href="${BRANCH.page}" rel="noopener" aria-label="Rated ${BRANCH.rating} out of 5 from more than 1,000 client reviews of the Frisco team on Experience.com"><span class="stars" aria-hidden="true">★★★★★</span><span><b>1,000+ reviews</b> · rated ${BRANCH.rating}</span></a>
+<a class="reviews-badge" href="${BRANCH.page}" rel="noopener" aria-label="Rated ${BRANCH.rating} out of 5 from more than 1,000 client reviews of the Frisco team on Experience.com"><span class="stars" aria-hidden="true">★</span><span><b>1,000+ reviews</b> · rated ${BRANCH.rating} stars</span></a>
 <div class="callbar"><a href="tel:${PAM.phoneE164}">Call Pam</a><a href="/contact/">Get pre-approved</a></div>
 <script src="/assets/js/site.js" defer></script>
 </body>

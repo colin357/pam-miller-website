@@ -31,7 +31,6 @@ const home = {
 </div>
 <figure class="hero-photo">
 <img src="/assets/img/pam-miller-headshot.webp" width="593" height="693" alt="Pam Miller, mortgage loan officer and Co-Branch Manager at Fairway in Frisco, Texas">
-<figcaption><b>Pam Miller</b>Co-Branch Manager · NMLS #${PAM.nmls}</figcaption>
 </figure>
 </div></section>
 <section class="sec" id="about"><div class="wrap">
@@ -204,9 +203,8 @@ const about = {
   faqs: aboutFaqs,
   body: `<section class="sec"><div class="wrap split">
 <div class="sticky">
-<figure class="hero-photo" style="max-width:340px">
+<figure class="hero-photo hero-photo--page">
 <img src="/assets/img/pam-miller-portrait.webp" width="387" height="480" alt="Portrait of Pamela Stuever Miller, Co-Branch Manager at Fairway Independent Mortgage Corporation, Frisco, Texas" style="aspect-ratio:387/480">
-<figcaption><b>Pam Miller</b>Co-Branch Manager · NMLS #${PAM.nmls}</figcaption>
 </figure>
 </div>
 <div class="prose">
