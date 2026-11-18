@@ -79,10 +79,12 @@ h4 { font-family: var(--sans); font-weight: 600; font-size: .9rem; text-transfor
 .btn-row { display: flex; flex-wrap: wrap; gap: 14px 16px; margin-top: 1.8rem; }
 
 /* ---------- Header ---------- */
-.util { background: var(--pine-deep); color: #d3ddd6; font-family: var(--sans); font-size: .84rem; letter-spacing: .02em; }
-.util .wrap { display: flex; justify-content: space-between; gap: 16px; padding-top: 9px; padding-bottom: 9px; flex-wrap: wrap; }
-.util a { color: #fff; text-decoration: none; font-weight: 600; }
-.util a:hover { color: var(--brass-light); }
+.util { background: var(--pine-deep); color: #fff; font-family: var(--sans); font-size: .98rem; letter-spacing: .02em; text-align: center; }
+.util .wrap { padding-top: 11px; padding-bottom: 11px; }
+.util a { color: #fff; text-decoration: none; display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 2px 12px; }
+.util b { font-weight: 650; }
+.util span { color: var(--brass-light); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.util a:hover span { color: #fff; }
 .site-head { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 3px double var(--brass); }
 .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 88px; }
 .brand { text-decoration: none; color: var(--pine-deep); display: flex; align-items: center; gap: 14px; padding: 10px 0; }
@@ -403,7 +405,6 @@ address { font-style: normal; }
   .callbar a { font-family: var(--sans); font-weight: 600; letter-spacing: .03em; font-size: 1rem; text-align: center; padding: 16px 8px; text-decoration: none; color: var(--pine-deep); background: var(--brass-soft); }
   .callbar a + a { background: var(--pine); color: #fff; }
   body { padding-bottom: 56px; }
-  .util span.hide-s { display: none; }
 }
 
 @media print {

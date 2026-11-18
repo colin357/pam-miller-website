@@ -125,7 +125,7 @@ ${p.noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" 
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="util"><div class="wrap"><span>Pam Miller · NMLS #${PAM.nmls} <span class="hide-s">· ${FAIRWAY.name} NMLS #${FAIRWAY.nmls}</span></span><span><a href="tel:${PAM.phoneE164}">${PAM.phone}</a> <span class="hide-s">· <a href="mailto:${PAM.email}">${PAM.email}</a></span></span></div></div>
+<div class="util"><div class="wrap"><a href="/contact/"><b>Buyers have more negotiating power in today's market.</b> <span>See what you qualify for →</span></a></div></div>
 <header class="site-head"><div class="wrap">
 <a class="brand" href="/" aria-label="${esc(SITE.name)}, home">${crest(52)}<span class="brand-text"><b>Pam Miller</b><span>Home Loans · Frisco, Texas</span></span></a>
 <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
