@@ -116,9 +116,9 @@ ${p.noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="geo.region" content="US-TX">
 <meta name="geo.placename" content="Frisco">
-<meta name="theme-color" content="#072a20">
+<meta name="theme-color" content="#0f3527">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
 <script type="application/ld+json">${graph(p)}</script>
@@ -225,6 +225,6 @@ ${faqPages.map((p) => p.faqs.map(([q, a]) => `### ${strip(q)}\n${strip(a)}\nSour
 Content is general education as of ${SITE.updatedHuman}, not a commitment to lend. Mortgage guidelines and loan limits change; confirm current details with Pam Miller at ${PAM.phone}.
 `);
 
-writeFileSync(join(OUT, 'favicon.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#072a20"/><rect x="6" y="50" width="52" height="6" fill="#f2b90f"/><text x="32" y="43" font-family="Arial Narrow,Arial,sans-serif" font-weight="900" font-size="36" text-anchor="middle" fill="#fff">PM</text></svg>`);
+writeFileSync(join(OUT, 'favicon.svg'), `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#0f3527"/><rect x="5" y="5" width="54" height="54" rx="3" fill="none" stroke="#b08a3e" stroke-width="1.5"/><text x="32" y="43" font-family="Georgia,Times New Roman,serif" font-size="30" text-anchor="middle" fill="#fff">PM</text></svg>`);
 
 console.log(`Built ${pages.length} pages to ./${OUT}`);
