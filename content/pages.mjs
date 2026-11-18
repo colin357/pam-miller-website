@@ -25,7 +25,7 @@ const home = {
 <img class="hero-bg" src="/assets/img/texas-bluebonnets-1600.webp" srcset="/assets/img/texas-bluebonnets-800.webp 800w, /assets/img/texas-bluebonnets-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="" fetchpriority="high">
 <div class="wrap">
 <div class="hero-copy">
-<h1>Home loans, explained until they make sense.</h1>
+<h1>Your mortgage lender in Frisco, Texas</h1>
 <p class="lede">Pam Miller is a Co-Branch Manager with Fairway Independent Mortgage Corporation in Frisco. She and her team help buyers and homeowners across Dallas–Fort Worth compare loan options, sort out credit questions and understand exactly what a rate will cost them.</p>
 <div class="btn-row"><a class="btn" href="/contact/">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
 </div>
@@ -34,34 +34,10 @@ const home = {
 <figcaption><b>Pam Miller</b>Co-Branch Manager · NMLS #${PAM.nmls}</figcaption>
 </figure>
 </div></section>
-<div class="ledger-bar"><div class="wrap">
-<ul class="ledger" aria-label="Key facts about Pam Miller">
-<li><b>${PAM.rating} / 5</b><span>${PAM.reviews} client reviews on Experience.com</span></li>
-<li><b>#${PAM.nmls}</b><span>NMLS ID, verifiable on NMLS Consumer Access</span></li>
-<li><b>Texas &amp; Oklahoma</b><span>Licensed in both states</span></li>
-<li><b>Four</b><span>Licensed loan originators at the Frisco branch</span></li>
-</ul>
-</div></div>
-
-<section class="sec" id="about"><div class="wrap split">
-<div class="sticky">
-<h2>Who is Pam Miller?</h2>
-</div>
-<div>
-${answer(`Pam Miller is a licensed mortgage loan officer (NMLS #${PAM.nmls}) and Co-Branch Manager at Fairway Independent Mortgage Corporation in Frisco, Texas. She works with first-time buyers, veterans, move-up and luxury buyers, investors and homeowners who are refinancing or downsizing throughout the Dallas–Fort Worth Metroplex.`, 'In one paragraph')}
-${facts([
-  ['Role', `Co-Branch Manager, ${FAIRWAY.name}`],
-  ['NMLS ID', `<a href="${PAM.nmlsLookup}" rel="noopener">#${PAM.nmls}</a>`],
-  ['Office', addr],
-  ['Phone', `<a href="tel:${PAM.phoneE164}">${PAM.phone}</a>`],
-  ['Email', `<a href="mailto:${PAM.email}">${PAM.email}</a>`],
-  ['Licensed in', 'Texas and Oklahoma'],
-  ['Primary market', 'Frisco, Collin County and the Dallas–Fort Worth Metroplex'],
-  ['Known for', 'Precise numbers, patient explanations and working well with first-time borrowers'],
-  ['Client rating', `${PAM.rating} out of 5 from ${PAM.reviews} reviews on Experience.com, as shown on Fairway.com in ${PAM.ratingAsOf}`],
-])}
-<p><a href="/about/">More about how Pam works →</a></p>
-</div>
+<section class="sec" id="about"><div class="wrap">
+<header class="sec-head"><h2>Meet Pam Miller</h2>
+<p class="lede">Pam is a Co-Branch Manager at Fairway in Frisco who is known for being precise with the numbers and patient with the questions. First-time buyers, veterans and homeowners across Dallas–Fort Worth come to her for a loan they actually understand.</p>
+<div class="btn-row" style="justify-content:center"><a class="btn btn--ghost" href="/about/">About Pam ${arrow}</a></div></header>
 </div></section>
 
 <section class="sec sec--stone sec--rule" id="loans"><div class="wrap">
@@ -135,7 +111,7 @@ ${teamStrip()}
 
 <section class="sec sec--stone sec--rule"><div class="wrap split">
 <div class="sticky">
-<h2>Quick answers about working with Pam</h2>
+<h2>Frequently asked questions</h2>
 <p><a href="/answers/">See all mortgage answers →</a></p>
 </div>
 ${faq(homeFaqs, true)}
