@@ -4,7 +4,7 @@ import { dirname, join } from 'node:path';
 import { SITE, PAM, BRANCH, FAIRWAY, TEAM, AREAS } from './content/site.mjs';
 import { pages } from './content/pages.mjs';
 import { loans } from './content/loans.mjs';
-import { esc, strip, arrow } from './content/parts.mjs';
+import { esc, strip, arrow, crest } from './content/parts.mjs';
 
 const OUT = 'public';
 const abs = (p) => SITE.url + p;
@@ -116,7 +116,7 @@ ${p.noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="geo.region" content="US-TX">
 <meta name="geo.placename" content="Frisco">
-<meta name="theme-color" content="#0f3527">
+<meta name="theme-color" content="#10362a">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -127,7 +127,7 @@ ${p.noindex ? '<meta name="robots" content="noindex">' : `<link rel="canonical" 
 <a class="skip" href="#main">Skip to content</a>
 <div class="util"><div class="wrap"><span>Pam Miller · NMLS #${PAM.nmls} <span class="hide-s">· ${FAIRWAY.name} NMLS #${FAIRWAY.nmls}</span></span><span><a href="tel:${PAM.phoneE164}">${PAM.phone}</a> <span class="hide-s">· <a href="mailto:${PAM.email}">${PAM.email}</a></span></span></div></div>
 <header class="site-head"><div class="wrap">
-<a class="brand" href="/" aria-label="${esc(SITE.name)}, home"><b>Pam Miller</b><span>Home Loans · Frisco, Texas</span></a>
+<a class="brand" href="/" aria-label="${esc(SITE.name)}, home">${crest(52)}<span class="brand-text"><b>Pam Miller</b><span>Home Loans · Frisco, Texas</span></span></a>
 <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
 <nav class="nav" id="nav" aria-label="Main">
 ${NAV.map(([n, u]) => `<a href="${u}"${cur(u)}>${n}</a>`).join('\n')}
@@ -139,6 +139,7 @@ ${head}
 ${p.body}
 </main>
 <footer class="site-foot"><div class="wrap">
+<div class="foot-crest">${crest(84, true)}</div>
 <div class="foot-grid">
 <div class="foot-brand"><b>Pam Miller</b>
 <p>Co-Branch Manager, NMLS #${PAM.nmls}<br>${FAIRWAY.name}</p>

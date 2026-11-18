@@ -21,23 +21,27 @@ const home = {
   faqs: homeFaqs,
   custom: true,
   body: `
-<section class="hero"><div class="wrap">
-<div>
+<section class="hero">
+<img class="hero-bg" src="/assets/img/texas-bluebonnets-1600.webp" srcset="/assets/img/texas-bluebonnets-800.webp 800w, /assets/img/texas-bluebonnets-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="" fetchpriority="high">
+<div class="wrap">
+<div class="hero-copy">
 <h1>Home loans, explained until they make sense.</h1>
 <p class="lede">Pam Miller is a Co-Branch Manager with Fairway Independent Mortgage Corporation in Frisco. She and her team help buyers and homeowners across Dallas–Fort Worth compare loan options, sort out credit questions and understand exactly what a rate will cost them.</p>
 <div class="btn-row"><a class="btn" href="/contact/">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
-<ul class="ledger" aria-label="Key facts about Pam Miller">
-<li><b>${PAM.rating}/5</b><span>${PAM.reviews} client reviews on Experience.com</span></li>
-<li><b>#${PAM.nmls}</b><span>NMLS ID, verifiable on NMLS Consumer Access</span></li>
-<li><b>TX + OK</b><span>Licensed in Texas and Oklahoma</span></li>
-<li><b>4</b><span>Licensed loan originators at the Frisco branch</span></li>
-</ul>
 </div>
 <figure class="hero-photo">
-<img src="/assets/img/pam-miller-headshot.webp" width="593" height="693" alt="Pam Miller, mortgage loan officer and Co-Branch Manager at Fairway in Frisco, Texas" fetchpriority="high">
+<img src="/assets/img/pam-miller-headshot.webp" width="593" height="693" alt="Pam Miller, mortgage loan officer and Co-Branch Manager at Fairway in Frisco, Texas">
 <figcaption><b>Pam Miller</b>Co-Branch Manager · NMLS #${PAM.nmls}</figcaption>
 </figure>
 </div></section>
+<div class="ledger-bar"><div class="wrap">
+<ul class="ledger" aria-label="Key facts about Pam Miller">
+<li><b>${PAM.rating} / 5</b><span>${PAM.reviews} client reviews on Experience.com</span></li>
+<li><b>#${PAM.nmls}</b><span>NMLS ID, verifiable on NMLS Consumer Access</span></li>
+<li><b>Texas &amp; Oklahoma</b><span>Licensed in both states</span></li>
+<li><b>Four</b><span>Licensed loan originators at the Frisco branch</span></li>
+</ul>
+</div></div>
 
 <section class="sec" id="about"><div class="wrap split">
 <div class="sticky">
@@ -61,15 +65,14 @@ ${facts([
 </div></section>
 
 <section class="sec sec--stone sec--rule" id="loans"><div class="wrap">
-<h2>Which home loan fits your situation?</h2>
-<p class="lede" style="margin-bottom:2.2rem">Each guide starts with a short answer, then covers requirements, costs and the Texas-specific rules that apply.</p>
+<header class="sec-head"><h2>Which home loan fits your situation?</h2><p class="lede">Each guide starts with a short answer, then covers requirements, costs and the Texas-specific rules that apply.</p></header>
 ${loanGrid()}
 </div></section>
 
 ${band('square', 'Based in Frisco. Lending across North Texas.')}
 
 <section class="sec"><div class="wrap">
-<h2>Credit and interest rates, in plain terms</h2>
+<header class="sec-head"><h2>Credit and interest rates, in plain terms</h2></header>
 <div class="split split--even" style="margin-top:2.4rem">
 <div>
 <h3>What credit score do I need to buy a home in Texas?</h3>
@@ -99,8 +102,7 @@ ${band('square', 'Based in Frisco. Lending across North Texas.')}
 </div></section>
 
 <section class="sec sec--stone" id="calculator"><div class="wrap">
-<h2>What would the monthly payment be?</h2>
-<p class="lede" style="margin-bottom:2.2rem">Enter a price, a down payment and an interest rate to estimate principal, interest, taxes and insurance.</p>
+<header class="sec-head"><h2>What would the monthly payment be?</h2><p class="lede">Enter a price, a down payment and an interest rate to estimate principal, interest, taxes and insurance.</p></header>
 <div class="calc">
 <form id="calc" aria-label="Mortgage payment estimator">
 <label class="full">Home price ($)<input id="c-price" inputmode="numeric" value="500000"></label>
@@ -126,8 +128,7 @@ ${band('square', 'Based in Frisco. Lending across North Texas.')}
 </div></section>
 
 <section class="sec"><div class="wrap">
-<h2>Who will be working on my loan?</h2>
-<p class="lede" style="margin-bottom:2.2rem">Four licensed loan originators, supported by an in-house processor and closer, work from the Frisco branch on Warren Parkway.</p>
+<header class="sec-head"><h2>Who will be working on my loan?</h2><p class="lede">Four licensed loan originators, supported by an in-house processor and closer, work from the Frisco branch on Warren Parkway.</p></header>
 ${teamStrip()}
 <p style="margin-top:2rem"><a href="/team/">Meet the team →</a></p>
 </div></section>
@@ -470,7 +471,7 @@ const loanIndex = {
   body: `<section class="sec"><div class="wrap">
 ${answer(`Pam Miller's team at Fairway in Frisco offers conventional, FHA, VA and jumbo mortgages, first-time homebuyer programs, investment property and DSCR loans, refinancing, and financing strategies for relocation and downsizing. The right loan depends on your credit score, down payment, how the property will be used and how long you plan to keep it.`)}
 ${loanGrid()}
-<h2 style="margin-top:3.5rem">How do the main loan types compare?</h2>
+<header class="sec-head" style="margin-top:4rem"><h2>How do the main loan types compare?</h2></header>
 <div class="tbl-wrap"><table>
 <caption>Loan types at a glance (2026)</caption>
 <thead><tr><th scope="col">Loan</th><th scope="col">Minimum down</th><th scope="col">Typical minimum credit score</th><th scope="col">Mortgage insurance</th><th scope="col">Best for</th></tr></thead>

@@ -8,6 +8,12 @@ export const strip = (s) => String(s).replace(/<[^>]+>/g, ' ').replace(/\s+/g, '
 export const arrow = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg>`;
 export const phoneIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>`;
 
+// Monogram crest used in the header, footer and section ornaments.
+export const crest = (size = 54, light = false) => {
+  const c = light ? '#dcc68e' : '#a5803c', t = light ? '#ffffff' : '#10362a';
+  return `<svg class="crest" width="${size}" height="${size}" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="47" fill="none" stroke="${c}" stroke-width="1.6"/><circle cx="50" cy="50" r="41.5" fill="none" stroke="${c}" stroke-width=".8"/><text x="50" y="63" text-anchor="middle" font-family="'Libre Caslon Display',Georgia,serif" font-size="38" fill="${t}" letter-spacing="1">PM</text><path d="M30 73h40" stroke="${c}" stroke-width=".8"/><path d="M50 78.5l3 3-3 3-3-3z" fill="${c}"/></svg>`;
+};
+
 export const answer = (text) => `<div class="answer"><p>${text}</p></div>`;
 
 export const facts = (rows) =>
@@ -34,8 +40,10 @@ export const teamStrip = () =>
 
 export const cta = (h = 'Have a question about your numbers?', p = 'Tell Pam where you are in the process. You will get a clear answer, a plain-English explanation and no pressure.') =>
   `<section class="cta" aria-label="Contact Pam Miller"><div class="wrap">
+${crest(64, true)}
 <h2>${h}</h2>
-<div><p>${p}</p><div class="btn-row" style="margin-top:0"><a class="btn" href="/contact/">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div></div>
+<p>${p}</p>
+<div class="btn-row"><a class="btn" href="/contact/">Start a pre-approval ${arrow}</a><a class="btn btn--ghost" href="tel:${PAM.phoneE164}">${phoneIcon} ${PAM.phone}</a></div>
 </div></section>`;
 
 export const contactCard = () =>
