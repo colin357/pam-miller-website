@@ -185,13 +185,13 @@ h4 { font-family: var(--sans); font-weight: 600; font-size: .9rem; text-transfor
 .grid > li { margin: 0; }
 .grid a { position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; height: 100%; padding: 30px 26px 24px; text-decoration: none; color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-top: 3px double var(--brass); transition: box-shadow .18s, transform .18s; }
 .grid a:hover { box-shadow: 0 14px 30px rgba(60, 44, 20, .14); transform: translateY(-2px); }
-.grid h3 { font-family: var(--display); font-weight: 400; font-size: 1.65rem; line-height: 1.15; margin-bottom: .5em; color: var(--pine-deep); }
+.grid h3 { font-family: var(--serif); font-weight: 700; font-size: 1.5rem; line-height: 1.2; letter-spacing: -.005em; margin-bottom: .5em; color: var(--pine-deep); }
 .grid p { font-size: 1rem; line-height: 1.5; color: var(--ink-2); margin-bottom: 1.4em; }
-.grid .go { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--rule); font-family: var(--sans); font-weight: 600; font-size: .86rem; letter-spacing: .04em; color: var(--leather); }
+.grid .go { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--rule); font-family: var(--sans); font-weight: 700; font-size: .9rem; letter-spacing: .03em; color: var(--leather); }
 .grid a::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--bg, none) center / cover no-repeat; opacity: .3; transition: opacity .2s; }
 .grid a:hover::before { opacity: .42; }
 .grid a[style] h3, .grid a[style] p, .grid a[style] .go { text-shadow: 0 0 10px rgba(255, 253, 248, .9); }
-.grid a[style] p { color: var(--ink); }
+.grid a[style] p { color: var(--ink); font-weight: 500; }
 /* Loan slider */
 .slider { position: relative; }
 .slider-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 6px 2px 22px; scrollbar-width: none; }
